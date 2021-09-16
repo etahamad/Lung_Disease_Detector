@@ -1,0 +1,5 @@
+django
+keras
+python-dotenv
+tensorflow
+scikit-image

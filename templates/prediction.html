@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BADORA-LAB | Test</title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
+  <link rel="stylesheet" type="text/css" href="/static/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <section id="banner" class="banner">
+    <div class="bg-color">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="{% url 'homePage' %}">
+                  <img src="/static/img/logo2.jpg" class="img-responsive" style="width: 140px; margin-top: -16px;">
+
+              </a>
+                 <!--cta-->
+              <section id="cta-1" class="section-padding">
+                <div class="container">
+                  <div class="row">
+                    <div class="schedule-tab">
+                      <div class="conainer">
+                          <form method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                              <h4 for="formFileMultiple" class="form-label">Choose Image To Test</h4>
+                              <input class="form-control" type="file" id="formFileMultiple" name="image" multiple>
+                            </div>
+                            <input type="submit" value="Test" class="btn btn-primary">
+                          </form>
+                          <div class="container" style="margin: 10px">
+                              <img src="{{ image_url }}" alt="" style="max-height: 500px; max-width: 300px">
+                          </div>
+                          <h1> {{ pred }} </h1>
+                          <div class="container" style="margin: 10px">
+                              <h5>{{ treatment }}</h5>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!--cta-->
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#banner">Home</a></li>
+                <li class=""><a href="#service">Services</a></li>
+                <li class=""><a href="#about">About</a></li>
+                <li class=""><a href="#testimonial">Testimonial</a></li>
+                <li class=""><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </section>
+    <!--footer-->
+  <footer id="footer">
+    <div class="top-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-4 marb20">
+            <div class="ftr-tle">
+              <h4 class="white no-padding">About Us</h4>
+            </div>
+            <div class="info-sec">
+              <p>Medical Site For Free Corona Test.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-4 marb20">
+            <div class="ftr-tle">
+              <h4 class="white no-padding">Follow us</h4>
+            </div>
+            <div class="info-sec">
+              <ul class="social-icon">
+                <li class="bglight-blue"><i class="fa fa-facebook"></i></li>
+                <li class="bgred"><i class="fa fa-google-plus"></i></li>
+                <li class="bgdark-blue"><i class="fa fa-linkedin"></i></li>
+                <li class="bglight-blue"><i class="fa fa-twitter"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-line">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            © Copyright BADORA-LAB. All Rights Reserved
+            <div class="credits">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--/ footer-->
+
+  <script src="/static/js/jquery.min.js"></script>
+  <script src="/static/js/jquery.easing.min.js"></script>
+  <script src="/static/js/bootstrap.min.js"></script>
+  <script src="/static/js/custom.js"></script>
+  <script src="/static/contactform/contactform.js"></script>
+</body>
+</html>
